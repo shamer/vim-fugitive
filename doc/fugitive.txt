@@ -311,6 +311,7 @@ HEAD:           The tree referenced by HEAD
 Makefile        The file named Makefile in the work tree
 HEAD^:Makefile  The file named Makefile in the parent of HEAD
 :Makefile       The file named Makefile in the index (writable)
+MERGEBASE:ref   The merge-base between the current commit and ref.
 -               The current file in HEAD
 ^               The current file in the previous commit
 ~3              The current file 3 commits ago

@@ -1760,6 +1760,8 @@ function! s:Diff(vert,...) abort
       catch /^fugitive:/
         return 'echoerr v:errmsg'
       endtry
+    elseif arg =~# '^MERGEBASE:'
+      let file = s:repo().git_chomp('merge-base','HEAD',substitute(arg, 'MERGEBASE:', '', '')) . ':' . s:buffer().path()
     else
       let file = s:buffer().expand(arg)
     endif
